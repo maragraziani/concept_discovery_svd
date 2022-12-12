@@ -89,12 +89,22 @@ CDISCO - main tool
 * get_model_state(model, input_data, save_fold='') -> performs inference on input_data and stores the output in save_fold
 
 CDISCO - vis tool
+
 The visualization toolbox allows us to visualize and interpret the results of CDISCO. 
 ```sh
    import cdisco.vis
    ```
 * cdisco.vis.cdisco_concept_vis(image_path, concept_vector, conv_maps) -> concept_heatmap
-* cdisco.vis.cdisco_vis_extremes
+* cdisco.vis.cdisco_vis_extremes_extensive(concepts_list, concept_candidates, eigenvectors, conv_maps, input_paths, predictions, save_fold='') -> visualizes the top 5 images that have the highest projection on the concept direction and saves it in save_fold
+* cdisco.vis.conceptbard(concept, save_fold='') -> saves in save_fold a visualization of the cncept segmentations to create a board that is representative of the concept
+
+CDISCO - analyze tool
+
+```sh
+   import cdisco.analyze
+   ```
+  
+  *
 
 ### Built With
 

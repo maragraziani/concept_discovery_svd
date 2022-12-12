@@ -71,11 +71,30 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About CDISCO
 
 This repo contains the implementation of the CDISCO toolkit proposed in the paper "nanan". 
 The central question of this work is: Given a representation of a complex model such as its deep latent space, is this already an interpretable version? If not, is an interpretable representation of deep spaces a compressed representation of the original space?
 
+### Functionalities
+
+CDISCO has multiple functionalities, which are described in the following. 
+
+CDISCO - main tool
+```sh
+   import cdisco.cdisco
+   ```
+* to implement - run_cdisco(model, input_data, save_fold='') -> runs get_model_state() and then discovery()
+* discovery(conv_maps, gradients, prediction, classes) -> concept_candidates, eigenvectors
+* get_model_state(model, input_data, save_fold='') -> performs inference on input_data and stores the output in save_fold
+
+CDISCO - vis tool
+The visualization toolbox allows us to visualize and interpret the results of CDISCO. 
+```sh
+   import cdisco.vis
+   ```
+* cdisco.vis.cdisco_concept_vis(image_path, concept_vector, conv_maps) -> concept_heatmap
+* cdisco.vis.cdisco_vis_extremes
 
 ### Built With
 

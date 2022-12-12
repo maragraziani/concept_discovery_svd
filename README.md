@@ -34,7 +34,7 @@
   <h3 align="center">CDISCO: Concept Discovery in Deep Spaces with Singular Vector Decomposition</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Repo with the initial toolkit and the basic functionalities to perform concept discovery in the latent space of deep learning models.
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
@@ -51,27 +51,20 @@
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary>Table of Contents</summary>
+  <summary>Supported Models</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">State-of-the-art CNNs pretrained on ImageNet</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li>Inception V3</li>
+      </ul>
+      <ul>
+        <li>ResNet 50</li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
+      <a href="#getting-started">(Hopefully) DistilBERT (a baby-transformer)</a>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 

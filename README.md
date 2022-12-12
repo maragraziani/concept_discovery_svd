@@ -104,8 +104,11 @@ CDISCO - analyze tool
    import cdisco.analyze
    ```
   
-  *
-
+  * cdisco.analyze.cdisco_alignment(concepts, concept_candidates) -> prints the list of classes that share the same discovered concept direction 
+  * cidsco.analyze.cdisco_pop_concepts(concept_candidates, classes, eigenvectors, save_fold='')-> prints the top 3 most popular directions among the classes
+  * cdisco.analyze.cdisco_angle_dissection(eigenvectors, candidates, save_fold='')-> stores in savefold the results of the alignment evaluation of each concept with the canonical basis. 
+  
+  
 ### Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.

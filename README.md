@@ -36,14 +36,12 @@
   <p align="center">
    Perform concept discovery in the latent space of deep learning models with Singular Value Decomposition. 
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/maragraziani/cdisco"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/maragraziani/cdisco">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/maragraziani/cdisco/issues">Report Bug</a>
   </p>
 </p>
 
@@ -54,7 +52,7 @@
   <summary>Supported Models</summary>
   <ol>
     <li>
-      <a href="#about-the-project">State-of-the-art CNNs pretrained on ImageNet</a>
+      <a href="#about-the-project">State-of-the-art CNNs</a>
       <ul>
         <li>Inception V3</li>
       </ul>
@@ -64,7 +62,29 @@
     </li>
   </ol>
 </details>
-
+<details open="open">
+  <summary>Datasets</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">ImageNet</a>
+      <ul>
+        <li>ImageWoof</li>
+      </ul>
+      <ul>
+        <li>Imagenette</li>
+      </ul>
+    </li>
+    <li>
+      <a href="#about-the-project">XAI Benchmark</a>
+      <ul>
+        <li>COMPAS</li>
+      </ul>
+      <ul>
+        <li>...</li>
+      </ul>
+    </li>
+  </ol>
+</details>
 
 
 <!-- ABOUT THE PROJECT -->

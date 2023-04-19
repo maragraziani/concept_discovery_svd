@@ -66,16 +66,16 @@
   <summary>Datasets</summary>
   <ol>
     <li>
-      <a href="#about-the-project">ImageNet</a>
+      <a href="https://www.image-net.org/">ImageNet</a>
       <ul>
-        <li>ImageWoof</li>
+        <li><a href="https://github.com/fastai/imagenette">ImageWoof</a></li>
       </ul>
       <ul>
-        <li>Imagenette</li>
+        <li><a href="https://github.com/fastai/imagenette">Imagenette</a></li>
       </ul>
     </li>
     <li>
-      <a href="#about-the-project">XAI Benchmark</a>
+      <a href="https://open-xai.github.io/">XAI Benchmark</a>
       <ul>
         <li>COMPAS</li>
       </ul>

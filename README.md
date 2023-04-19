@@ -34,7 +34,7 @@
   <h3 align="center">CDISCO: Concept Discovery in Deep Spaces with Singular Value Decomposition</h3>
 
   <p align="center">
-    A toolkit to perform concept discovery in the latent space of deep learning models.
+   Perform concept discovery in the latent space of deep learning models with Singular Value Decomposition. 
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />

@@ -77,7 +77,7 @@
     <li>
       <a href="https://open-xai.github.io/">XAI Benchmark</a>
       <ul>
-        <li>COMPAS</li>
+        <li><a href="https://www.propublica.org/datastore/dataset/compas-recidivism-risk-score-data-and-analysis">COMPAS</a></li>
       </ul>
       <ul>
         <li>...</li>

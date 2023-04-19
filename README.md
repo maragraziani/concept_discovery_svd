@@ -34,7 +34,7 @@
   <h3 align="center">CDISCO: Concept Discovery in Deep Spaces with Singular Value Decomposition</h3>
 
   <p align="center">
-    Repo with the initial toolkit and the basic functionalities to perform concept discovery in the latent space of deep learning models.
+    A toolkit to perform concept discovery in the latent space of deep learning models.
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
@@ -62,9 +62,6 @@
         <li>ResNet 50</li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">(Hopefully) DistilBERT (a baby-transformer)</a>
-    </li>
   </ol>
 </details>
 
@@ -73,12 +70,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About CDISCO
 
-This repo contains the implementation of the CDISCO toolkit proposed in the paper "nanan". 
+This repo contains the implementation of the CDISCO toolkit proposed in the paper "Concept Discovery and Dataset Exploration with Singular Value Decomposition". 
 The central question of this work is: Given a representation of a complex model such as its deep latent space, is this already an interpretable version? If not, is an interpretable representation of deep spaces a compressed representation of the original space?
+We propose to analyze the latent space of a deep neural network with Singular Value Decomposition, to discover a new representation of the space that best describes "what the model has learnt". By reweighting the singular vectors with a gradient-informed ranking, we identify directions in the latent space carrying the most relevant information for the model outcome. 
 
 ### Functionalities
 
-CDISCO has multiple functionalities, which are described in the following. 
+CDISCO can be used to identify the singular vectors, to visualize concept maps and to analyze the model internal state. 
 
 CDISCO - main tool
 ```sh

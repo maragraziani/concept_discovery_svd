@@ -37,7 +37,15 @@ def get_dataset(dname, source=None, train=True):
         if source==None:
             source = f'/mnt/nas4/datasets/ToReadme/{dataset}/'
         if train:
-            train_files_path = (source+'/train')
+            source = (source+'/train')
+        labels_path = os.getenv("HOME") + '/.torch/models/imagenet_class_index.json'
+        lim=10
+        
+    elif dname=='ilsvrc12test':
+        if source==None:
+            source = f'/mnt/nas4/datasets/ToReadme/{dataset}/'
+        #if train:
+        source = (source+'/test')
         labels_path = os.getenv("HOME") + '/.torch/models/imagenet_class_index.json'
         lim=10
 
@@ -62,14 +70,14 @@ def get_dataset(dname, source=None, train=True):
     labels = {}
     k=0
     image_counter=0
-    for dir_ in os.listdir(source+'/train'):
-        count+= len(os.listdir(source+'/train'+'/'+dir_))
+    for dir_ in os.listdir(source):#+'/train'):
+        count+= len(os.listdir(source+'/'+dir_))
         labels[dir_]=get_label(idx_to_labels, dir_)
         k+=1
         image_counter=0
-        for p in os.listdir(source+'/train'+'/'+dir_):
+        for p in os.listdir(source+'/'+dir_):
             if image_counter < lim:
-                paths.append(source+'/train'+'/'+dir_+'/'+p)
+                paths.append(source+'/'+dir_+'/'+p)
                 image_counter+=1
 
     count = int(len(paths))

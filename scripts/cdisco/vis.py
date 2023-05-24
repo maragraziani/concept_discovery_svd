@@ -161,6 +161,13 @@ def cdisco_vis_extremes_extensive(concept, candidates, pvh, conv_embeddings, con
     
     plt.axis("off")
     plt.savefig(f"{SAVEFOLD}/ml_extensive_{c}")
+    
+    plt.figure()
+    img_id=np.argsort(p_data)[::-1][0]
+    image=transform(Image.open(paths[img_id])).swapaxes(0,1).swapaxes(1,-1)
+    plt.imshow(image)
+    plt.axis("off")
+    plt.savefig(f"{SAVEFOLD}/ml_extensive_full_image_{c}")
 
 def img_3c_hist(img):
     image=img

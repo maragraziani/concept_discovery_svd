@@ -75,9 +75,12 @@ def cdisco_pop_concepts(class_concept_candidates, classes, pvh, savefold='',top=
     return
 
 def cdisco_angle_dissection(pvh, candidates, savefold=''):
+    print("dissection update")
     max_angles=[]
     channels=[]
-    plt.rcParams['figure.figsize']=(30,10)
+    ticks=[]
+    plt.rcParams['font.size']=20
+    plt.rcParams['figure.figsize']=(40,15)
     plt.figure()
 
     for conc in candidates.keys():
@@ -88,10 +91,19 @@ def cdisco_angle_dissection(pvh, candidates, savefold=''):
     sorted_idxs = np.argsort(max_angles)
     for i in range(len(channels)):
         plt.bar(i, max_angles[sorted_idxs[i]])
+        if max_angles[sorted_idxs[i]]>0.7:
+            ticks.append(f'{conc}.{channel}')
+        else:
+            ticks.append(f'')
     plt.axhline(y = 0.6, color = 'r', linestyle = '-')
     plt.axhline(y = -0.6, color = 'r', linestyle = '-')
     plt.ylim(-1,1)
-    plt.xticks(np.arange(len(channels)),[channels[sidx] for sidx in sorted_idxs], rotation=90)
+    
+    plt.xticks(np.arange(len(channels)),ticks, rotation=90) #[channels[sidx] for sidx in sorted_idxs], rotation=90)
     plt.title(f'Concept alignment to canonical basis ([concept].[channel]). N candidates: {len(candidates)} of {len(pvh[0,:])} dimensions.')
     plt.savefig(f'{savefold}/cdisco_analyze/angle_dissection.png')
     return
+
+
+
+

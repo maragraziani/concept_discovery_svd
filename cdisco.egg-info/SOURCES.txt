@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+cdisco.egg-info/PKG-INFO
+cdisco.egg-info/SOURCES.txt
+cdisco.egg-info/dependency_links.txt
+cdisco.egg-info/requires.txt
+cdisco.egg-info/top_level.txt
+scripts/color_analysis.py
+scripts/datasets.py
+scripts/predict.py

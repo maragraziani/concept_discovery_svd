@@ -57,9 +57,10 @@
       <ul>
         <li>ResNet 50</li>
       </ul>
-      <ul>
-        <li>MLP for tabular data</li>
-      </ul>
+        </li>
+      <li>
+    MLP for tabular daat
+      
       </li>
   </ol>
 </details>

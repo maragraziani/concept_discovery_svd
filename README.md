@@ -187,7 +187,7 @@ Mara Graziani - [@mormontre](https://twitter.com/mormontre) - mara.graziani@hevs
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/maragraziani/cdisco.svg?style=for-the-badge
-[contributors-url]: https://github.com/maragraziani/cdisco/graphs/contributors
+[contributors-url]: https://github.com/maragraziani/concept_discovery_svd/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/maragraziani/cdisco.svg?style=for-the-badge
 [forks-url]: https://github.com/maragraziani/cdisco/network/members
 [stars-shield]: https://img.shields.io/github/stars/maragraziani/cdisco.svg?style=for-the-badge

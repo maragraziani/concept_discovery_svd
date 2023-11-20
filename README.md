@@ -37,9 +37,6 @@
    Source code for the paper in TMLR 2023.  
     Perform concept discovery in the latent space of deep learning models with Singular Value Decomposition. 
     <br />
-    <a href="https://github.com/maragraziani/cdisco"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
     <a href="https://github.com/maragraziani/cdisco">View Demo</a>
     ·
     <a href="https://github.com/maragraziani/cdisco/issues">Report Bug</a>
@@ -60,7 +57,10 @@
       <ul>
         <li>ResNet 50</li>
       </ul>
-    </li>
+      <ul>
+        <li>MLP for tabular data</li>
+      </ul>
+      </li>
   </ol>
 </details>
 <details open="open">
@@ -79,9 +79,6 @@
       <a href="https://open-xai.github.io/">XAI Benchmark</a>
       <ul>
         <li><a href="https://www.propublica.org/datastore/dataset/compas-recidivism-risk-score-data-and-analysis">COMPAS</a></li>
-      </ul>
-      <ul>
-        <li>...</li>
       </ul>
     </li>
   </ol>

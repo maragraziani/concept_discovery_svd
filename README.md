@@ -31,10 +31,11 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">CDISCO: Concept Discovery in Deep Spaces with Singular Value Decomposition</h3>
+  <h3 align="center">Uncovering Unique Concept Vectors through Latent Space Decomposition</h3>
 
   <p align="center">
-   Perform concept discovery in the latent space of deep learning models with Singular Value Decomposition. 
+   Source code for the paper in TMLR 2023.  
+    Perform concept discovery in the latent space of deep learning models with Singular Value Decomposition. 
     <br />
     <a href="https://github.com/maragraziani/cdisco"><strong>Explore the docs »</strong></a>
     <br />
@@ -90,7 +91,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About CDISCO
 
-This repo contains the implementation of the CDISCO toolkit proposed in the paper "Concept Discovery and Dataset Exploration with Singular Value Decomposition". 
+This repo contains the implementation of the CDISCO toolkit proposed in the paper "Uncovering Unique Concept Vectors through Latent Space Decomposition", published in Transactions in Machine Learning Research in 2023.
+
 The central question of this work is: Given a representation of a complex model such as its deep latent space, is this already an interpretable version? If not, is an interpretable representation of deep spaces a compressed representation of the original space?
 We propose to analyze the latent space of a deep neural network with Singular Value Decomposition, to discover a new representation of the space that best describes "what the model has learnt". By reweighting the singular vectors with a gradient-informed ranking, we identify directions in the latent space carrying the most relevant information for the model outcome. 
 

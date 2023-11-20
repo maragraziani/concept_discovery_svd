@@ -31,19 +31,17 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">CDISCO: Concept Discovery in Deep Spaces with Singular Vector Decomposition</h3>
+  <h3 align="center">CDISCO: Concept Discovery in Deep Spaces with Singular Value Decomposition</h3>
 
   <p align="center">
-    Repo with the initial toolkit and the basic functionalities to perform concept discovery in the latent space of deep learning models.
+   Perform concept discovery in the latent space of deep learning models with Singular Value Decomposition. 
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/maragraziani/cdisco"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/maragraziani/cdisco">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/maragraziani/cdisco/issues">Report Bug</a>
   </p>
 </p>
 
@@ -54,7 +52,7 @@
   <summary>Supported Models</summary>
   <ol>
     <li>
-      <a href="#about-the-project">State-of-the-art CNNs pretrained on ImageNet</a>
+      <a href="#about-the-project">State-of-the-art CNNs</a>
       <ul>
         <li>Inception V3</li>
       </ul>
@@ -62,23 +60,43 @@
         <li>ResNet 50</li>
       </ul>
     </li>
+  </ol>
+</details>
+<details open="open">
+  <summary>Datasets</summary>
+  <ol>
     <li>
-      <a href="#getting-started">(Hopefully) DistilBERT (a baby-transformer)</a>
+      <a href="https://www.image-net.org/">ImageNet</a>
+      <ul>
+        <li><a href="https://github.com/fastai/imagenette">ImageWoof</a></li>
+      </ul>
+      <ul>
+        <li><a href="https://github.com/fastai/imagenette">Imagenette</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="https://open-xai.github.io/">XAI Benchmark</a>
+      <ul>
+        <li><a href="https://www.propublica.org/datastore/dataset/compas-recidivism-risk-score-data-and-analysis">COMPAS</a></li>
+      </ul>
+      <ul>
+        <li>...</li>
+      </ul>
     </li>
   </ol>
 </details>
 
 
-
 <!-- ABOUT THE PROJECT -->
 ## About CDISCO
 
-This repo contains the implementation of the CDISCO toolkit proposed in the paper "nanan". 
+This repo contains the implementation of the CDISCO toolkit proposed in the paper "Concept Discovery and Dataset Exploration with Singular Value Decomposition". 
 The central question of this work is: Given a representation of a complex model such as its deep latent space, is this already an interpretable version? If not, is an interpretable representation of deep spaces a compressed representation of the original space?
+We propose to analyze the latent space of a deep neural network with Singular Value Decomposition, to discover a new representation of the space that best describes "what the model has learnt". By reweighting the singular vectors with a gradient-informed ranking, we identify directions in the latent space carrying the most relevant information for the model outcome. 
 
 ### Functionalities
 
-CDISCO has multiple functionalities, which are described in the following. 
+CDISCO can be used to identify the singular vectors, to visualize concept maps and to analyze the model internal state. 
 
 CDISCO - main tool
 ```sh
@@ -114,7 +132,6 @@ CDISCO - analyze tool
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Python3.6](https://getbootstrap.com)
 * [PyTorch](https://jquery.com)
-* [IDK](https://laravel.com)
 
 
 <!-- GETTING STARTED -->
@@ -146,13 +163,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -164,54 +174,30 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
-
-
-
+Mara Graziani - [@mormontre](https://twitter.com/mormontre) - mara.graziani@hevs.ch
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/maragraziani/cdisco.svg?style=for-the-badge
+[contributors-url]: https://github.com/maragraziani/cdisco/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/maragraziani/cdisco.svg?style=for-the-badge
+[forks-url]: https://github.com/maragraziani/cdisco/network/members
+[stars-shield]: https://img.shields.io/github/stars/maragraziani/cdisco.svg?style=for-the-badge
+[stars-url]: https://github.com/maragraziani/cdisco/stargazers
+[issues-shield]: https://img.shields.io/github/issues/maragraziani/cdisco?style=for-the-badge
+[issues-url]: https://github.com/maragraziani/cdisco/issues
+[license-shield]: https://img.shields.io/github/license/maragraziani/cdisco.svg?style=for-the-badge
+[license-url]: https://github.com/maragraziani/cdisco/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-url]: https://www.linkedin.com/in/mara-graziani-878980105/?originalSubdomain=ch
 [product-screenshot]: images/screenshot.png

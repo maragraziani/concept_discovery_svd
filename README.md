@@ -59,9 +59,7 @@
       </ul>
         </li>
       <li>
-    MLP for tabular daat
-      
-      </li>
+    MLP for tabular data
   </ol>
 </details>
 <details open="open">

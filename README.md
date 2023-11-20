@@ -89,8 +89,10 @@
 
 This repo contains the implementation of the CDISCO toolkit proposed in the paper "Uncovering Unique Concept Vectors through Latent Space Decomposition", published in Transactions in Machine Learning Research in 2023.
 
-The central question of this work is: Given a representation of a complex model such as its deep latent space, is this already an interpretable version? If not, is an interpretable representation of deep spaces a compressed representation of the original space?
-We propose to analyze the latent space of a deep neural network with Singular Value Decomposition, to discover a new representation of the space that best describes "what the model has learnt". By reweighting the singular vectors with a gradient-informed ranking, we identify directions in the latent space carrying the most relevant information for the model outcome. 
+Achieving broader interpretability with concept vectors requires a reverse engineering approach that focuses on automating concept identification. The central question here is: Given a representation of a complex model such as its deep latent space spanned by individual neurons, is this already an interpretable version? If not, can we find a different description of this space that aligns with semantically distinct and unique concepts?
+We propose to analyze the latent space of a deep neural network with Singular Value Decomposition, to discover a new representation of the space that best describes "what the model has learnt". 
+This novel framework merges factorization, clustering of the latent space and output-sensitivity analyses. As a result, we are able to isolate directions in the latent space that respond to well-distinguishable, unique concepts. 
+
 
 ### Functionalities
 

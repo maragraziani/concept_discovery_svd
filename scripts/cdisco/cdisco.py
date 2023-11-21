@@ -1,7 +1,8 @@
 import scipy.ndimage
 import numpy as np
 import sys
-from datasets import transform
+sys.path.append('../../')
+from scripts.datasets import transform
 import torch
 import torchvision 
 import ctypes
@@ -44,7 +45,7 @@ def cdisco(conv_maps, gradients_wrt_conv_layer, predictions, classes):
     
     for k in classes:
         idxs_of_class_k = np.asarray(np.argwhere(np.argmax(predictions, axis=1)==k)).ravel() # predicitons = model predictions
-        all_the_rest = np.asarray(np.argwhere(np.argwhere(np.argmax(predictions, axis=1)!=k)).ravel()
+        all_the_rest = np.asarray(np.argwhere(y!=k)).ravel()
 
         sel_info=np.asarray([projected_g[n] for n in idxs_of_class_k])
         mean_gk[int(k)] = np.mean(sel_info, axis=0) #std
@@ -54,45 +55,6 @@ def cdisco(conv_maps, gradients_wrt_conv_layer, predictions, classes):
         std_gnotk[int(k)] = np.std(rest_info, axis=0)
         z[int(k)] = mean_gk[int(k)] - mean_gnotk[int(k)]
         z[int(k)] = z[int(k)] / std_gnotk[int(k)]
-
-
-    class_reordered_eigenvalues={}
-    class_concept_candidates = {}
-
-    for k in classes:
-        class_reordered_eigenvalues[int(k)] = z[int(k)]
-        class_concept_candidates[int(k)] = np.asarray(class_reordered_eigenvalues[int(k)]).argsort()[::-1]
-    return class_concept_candidates, pvh
-
-def cdisco_rel(conv_maps, gradients_wrt_conv_layer, predictions, c1,c2):
-    def relu(data):
-        return data * (data>0)
-    conv_embeddings=np.mean(conv_maps, axis=(2,3))
-    pu, ps, pvh = np.linalg.svd(conv_embeddings)
-    
-    rg=relu(gradients_wrt_conv_layer)
-    
-    g_k = np.multiply(rg, conv_maps)
-    pooled_g = np.mean(g_k, axis=(2,3))
-    projected_g = np.dot(pooled_g, pvh)
-
-    z = {}
-    mean_gk={}
-    mean_gnotk={}
-    std_gnotk={}
-    
-    #for k in classes:
-    idxs_of_class_c1 = np.asarray(np.argwhere(np.argmax(predictions, axis=1)==c1)).ravel() # predicitons = model predictions
-    all_the_rest = np.asarray(np.argwhere(np.argmax(predictions, axis=1)!=c2)).ravel()
-
-    sel_info=np.asarray([projected_g[n] for n in idxs_of_class_k])
-    mean_gk[int(k)] = np.mean(sel_info, axis=0) #std
-
-    rest_info = np.asarray([projected_g[n] for n in all_the_rest])
-    mean_gnotk[int(k)] = np.mean(rest_info, axis=0)
-    std_gnotk[int(k)] = np.std(rest_info, axis=0)
-    z[int(k)] = mean_gk[int(k)] - mean_gnotk[int(k)]
-    z[int(k)] = z[int(k)] / std_gnotk[int(k)]
 
 
     class_reordered_eigenvalues={}
@@ -161,9 +123,12 @@ def get_model_state(model, paths, y, dim_c, dim_w, dim_h, SAVEFOLD=''):
         loss = torch.nn.CrossEntropyLoss()
         pred = outs['fc']
         len_=pred.shape[0]
-        target=np.zeros((len_, 1000))
+ 
+        #target=np.zeros((len_, 1000))
+        target=np.zeros((len_, 1))
         for i in range(len(pred)):
-            target[i,int(batch_y[i])]=1.
+            target[i] = y[i] #target[i,int(batch_y[i])]=1.
+        #target = y    
         target=torch.tensor(target, requires_grad=True).to(device)
         outloss = loss(pred, target)
 

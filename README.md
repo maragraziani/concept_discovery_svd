@@ -37,9 +37,9 @@
    Source code for the paper in TMLR 2023.  
     Perform concept discovery in the latent space of deep learning models with Singular Value Decomposition. 
     <br />
-    <a href="https://github.com/maragraziani/cdisco">View Demo</a>
+    <a href="https://github.com/maragraziani/concept_discovery_svd/notebooks/ExampleNotebook.ipynb">View Demo</a>
     ·
-    <a href="https://github.com/maragraziani/cdisco/issues">Report Bug</a>
+    <a href="https://github.com/maragraziani/concept_discovery_svd/issues">Report Bug</a>
   </p>
 </p>
 
